@@ -1,4 +1,18 @@
-const h2 = document.createElement("h2");
-h2.textContent = "This content added by JavaScript";
 
-document.querySelector("body").appendChild(h2);
+
+
+const party = document.getElementById("party");
+
+
+
+
+function changeColor() {
+    randomColor = Math.floor(Math.random()*16777215).toString(16);
+    document.body.style.backgroundColor = "#" + randomColor;
+    
+}
+
+
+
+party.addEventListener("mousemove", changeColor);
+changeColor();
